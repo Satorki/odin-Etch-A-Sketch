@@ -8,12 +8,15 @@ body {
 .container {
     width: 600px;
     height: 600px;
-    border: 1px solid rgb(92, 84, 239);
+    border: 1px solid #5c54ef;
     margin: 30px auto;
     display: flex;
-    gap: 1px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 div {
-    border: 1px solid black;
+    outline: 1px solid #000000;
+    outline-offset: -1px;
 }

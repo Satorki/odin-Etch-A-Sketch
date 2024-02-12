@@ -8,8 +8,8 @@ gridSizeButton.innerText = "Make";
 gridSizeButton.style.margin = "0 0 0 10px";
 
 gridSize.type = "number";
-gridSize.value = "16";
-gridSize.min = "16";
+gridSize.value = "10";
+gridSize.min = "1";
 gridSize.max = "100";
 
 // SELECTORS FOR BODY, CONTAINER, BUTTON
@@ -21,11 +21,29 @@ body.insertBefore(gridSize, container);
 body.insertBefore(gridSizeButton, container);
 
 const gridFinal = () => {
-    for (let i = 0; i < gridSize.value; i++) {
+    // WIDTH,HEIGHT VALUE of BOX
+    let divWidth = 600 / gridSize.value + "px";
+    let divHeight = 600 / gridSize.value + "px";
+
+    // SAFETY FOR TO LOW OR TO HIGH NUMBER INSERTION
+    if (gridSize.value > 100) {
+        alert("to high number")
+    } else if (gridSize.value < 1) {
+        alert("to low number")
+    } else {
+    for (let i = 0; i < gridSize.value * gridSize.value; i++) {
         let div = document.createElement("div");
         container.appendChild(div);
+
+        div.style.width = divWidth;
+        div.style.height = divHeight;
     }
+    }
+
 };
+
+
+
 
 // CREATING A DIV-CONTAINER
 gridSizeButton.addEventListener("click", gridFinal);
