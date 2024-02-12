@@ -54,6 +54,4 @@ gridSizeButton.addEventListener("click", () => {
         el.style.backgroundColor = "red"
   });}) 
 
-
-
 });
