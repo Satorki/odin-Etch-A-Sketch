@@ -1,6 +1,7 @@
-// CREATING INPUT AND BUTTON
+// CREATING INPUT, BUTTON
 let gridSize = document.createElement("input");
 let gridSizeButton = document.createElement("button");
+
 
 // STYLIZE BUTTON AND INPUT
 gridSizeButton.innerText = "Make";
@@ -20,9 +21,8 @@ body.insertBefore(gridSize, container);
 body.insertBefore(gridSizeButton, container);
 
 const gridFinal = () => {
-let div = document.createElement("div");
-
     for (let i = 0; i < gridSize.value; i++) {
+        let div = document.createElement("div");
         container.appendChild(div);
     }
 };

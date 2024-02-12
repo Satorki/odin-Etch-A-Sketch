@@ -5,3 +5,15 @@ body {
     text-align: center;
 }
 
+.container {
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgb(92, 84, 239);
+    margin: 30px auto;
+    display: flex;
+    gap: 1px;
+}
+
+div {
+    border: 1px solid black;
+}
