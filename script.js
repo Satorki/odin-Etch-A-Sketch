@@ -2,7 +2,6 @@
 let gridSize = document.createElement("input");
 let gridSizeButton = document.createElement("button");
 
-// STYLIZE BUTTON AND INPUT
 gridSizeButton.innerText = "Make";
 gridSizeButton.style.margin = "0 0 0 10px";
 
@@ -15,17 +14,18 @@ gridSize.max = "100";
 let body = document.querySelector("body");
 let container = document.querySelector(".container");
 
-// INSERTING INPUT AND BUTTON TO PAGE
 body.insertBefore(gridSize, container);
 body.insertBefore(gridSizeButton, container);
 
 // CREATING A DIV GRID BY BUTTON
 gridSizeButton.addEventListener("click", () => {
+
+  // REFRESHING CONTAINER
   if (document.querySelector(".box")) {
     document.querySelectorAll(".box").forEach((box) => box.remove());
   }
 
-  // WIDTH,HEIGHT VALUE of BOX
+  // WIDTH,HEIGHT VALUE of SINGLE BOX
   let divWidth = 600 / gridSize.value + "px";
   let divHeight = 600 / gridSize.value + "px";
 
@@ -47,11 +47,10 @@ gridSizeButton.addEventListener("click", () => {
 
   let singleDiv = document.querySelectorAll(".box");
 
-  // COLOR AN DIV
-
+  // COLOR AN SINGLE BOX
   singleDiv.forEach((el) => { 
     el.addEventListener("mouseover", () => {
-        el.style.backgroundColor = "red"
-  });}) 
+        el.style.backgroundColor = "rgb(0, 0, 0, 1 )";
+  });})
 
 });
